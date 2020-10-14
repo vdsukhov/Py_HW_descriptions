@@ -112,11 +112,11 @@ Create messages that will be displayed by your function in case of an incorrect 
 In this task you are not allowed to use third-party modules that can parse fasta files. Your task is to create the module  `fastaparse.py`. This module should contain the following functionality:
 
 - The monoisotopic mass table for amino acids as a dictionary `mass_table`
-- RNA codon table as a dictionary `rna_codon`
+- DNA codon table as a dictionary `dna_codon`
 - Function `parse(file_path)` that parses a `fasta` file and returns a dictionary. The dictionary consists of pairs **seq_id** as `string` and the sequence itself **seq** as `string` or `list`.
-- Function `translate(rna_seq)`. This function takes RNA sequence as a string and returns the protein string encoded by `rna_seq` as a string.
+- Function `translate(dna_seq)`. This function takes DNA sequence as a string and returns the protein string encoded by `dna_seq` as a string.
 - Function `calc_mass(prot_seq)`. This function takes a string encoding a protein and returns the mass as `float`.
-- Function `orf(rna_seq)`. This function takes RNA sequence as string and returns `list` of every distinct candidate protein string that can be translated from **Open Reading Frames** of `rna_seq`. 
+- Function `orf(dna_seq)`. This function takes DNA sequence as string and returns `list` of every distinct candidate protein string that can be translated from **Open Reading Frames** of `dna_seq`. 
 
 Example:
 Suppose we have the file `fasta_data.txt` with the following content:
@@ -151,7 +151,7 @@ res_dict = {
 }
 """
 
-rna_seq = "ACAGGACGGCATTGCCACGTCACGC\
+dna_seq = "ACAGGACGGCATTGCCACGTCACGC\
            CGTTTTGCCAGAGACATCGATCGCG\
            AAGCCGATTTCGATGAGTCCCGCAT\
            GCCTAAGGCACAATAGAATGTAGCA\
