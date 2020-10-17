@@ -1,7 +1,7 @@
 # Task 1:
 In this task you are not allowed to use the csv module (and any modules for parsing csv file). Your task is to create the module  `mycsv.py`. This module should contain the following functions:
 
-- `read_csv(path_to_csv_file, del=",")` This function takes two arguments: 1st is the path to the file, 2nd is the delimiter character. By default, the separator is a comma. The function should read the file and return a list of lines. 
+- `read_csv(path_to_csv_file, delimiter=",")` This function takes two arguments: 1st is the path to the file, 2nd is the delimiter character. By default, the separator is a comma. The function should read the file and return a list of lines. 
 ---
 Suppose we have the file `data.csv` with the following content:
 ```
@@ -59,7 +59,7 @@ ID*Value
 
 ```python
 import mycsv
-lines = mycsv.read_csv("data.csv", del='*')
+lines = mycsv.read_csv("data.csv", delimiter='*')
 """
 now lines = [
     ['ID', 'Vlaue'], 
@@ -74,7 +74,7 @@ now lines = [
 
 If a file with name `path_to_csv_file` doesn't exist, your function should print a message to the console "Error, such file doesn't exist" and return empty list.
 
-- `write_csv(path_to_csv_file, data, del='c')` This function should save data from `data` variable to the file with name `path_to_csv_file` using `del` delimiter. Example of work:
+- `write_csv(path_to_csv_file, data, delimiter='c')` This function should save data from `data` variable to the file with name `path_to_csv_file` using `del` delimiter. Example of work:
 
 ```python
 import mycsv
@@ -86,7 +86,7 @@ lines = [
     ]
 
 mycsv.write_csv("data_1.csv", lines)
-mycsv.write_csv("data_1.tsv", lines, del="\t")
+mycsv.write_csv("data_1.tsv", lines, delimiter="\t")
 ```
 
 This code should create (overwrite) file with the name `data.tsv` in the current directory with the following content:
