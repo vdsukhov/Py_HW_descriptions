@@ -74,7 +74,7 @@ now lines = [
 
 If a file with name `path_to_csv_file` doesn't exist, your function should print a message to the console "Error, such file doesn't exist" and return empty list.
 
-- `write_csv(path_to_csv_file, data, delimiter=',')` This function should save data from `data` variable to the file with name `path_to_csv_file` using `del` delimiter. Example of work:
+- `write_csv(path_to_csv_file, data, delimiter=',')` This function should save data from `data` variable to the file with name `path_to_csv_file` using `delimiter` delimiter. Example of work:
 
 ```python
 import mycsv
